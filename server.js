@@ -14,7 +14,7 @@ app.use(express.static("public"));
 // FORM SUBMIT
 app.post("/submit", (req, res) => {
   const email = req.body.email;
-  const favfood = req.body.Password;
+  const Password = req.body.Password;
 
   // 🔥 THIS IS WHAT YOU WERE MISSING
   console.log("NEW SUBMISSION RECEIVED:");
@@ -24,7 +24,7 @@ app.post("/submit", (req, res) => {
 
   const entry = `
 Email: ${email}
-FavFood: ${Password}
+Password: ${Password}
 Time: ${new Date().toLocaleString()}
 -----------------------------
 `;
@@ -41,3 +41,4 @@ Time: ${new Date().toLocaleString()}
 app.listen(PORT, () => {
   console.log("Server started on port:", PORT);
 });
+
